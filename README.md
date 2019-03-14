@@ -7,7 +7,7 @@
    ![sess1](https://user-images.githubusercontent.com/47202519/54346898-e4779d00-466b-11e9-9ef3-851c4db36a99.png)
     
   
-<li>Create a database in <strong>phpmyadmin</strong> and make a connection with the registration page and login page with the help of flask,  when we enter details in to the registration page all details will store in the database.</li>
+<li>Create a database in <strong>phpmyadmin</strong> and make a connection with the registration page and login page with the help of flask, when we enter details in to the registration page all details will store in the database.</li>
 
 ~~~
 import mysql.connector
@@ -17,7 +17,7 @@ cursor = db.cursor()
 
 ~~~
 
-<li>We use <strong>form action attribute</strong> with server path <strong><form action="http://localhost:5000/index"></strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py<strong> page (in python file)<strong>session.py</strong> to call the same function</li>
+<li>We use <strong>form action attribute</strong> with server path <strong><form action="http://localhost:5000/index"></strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py</strong> page (in python file)<strong>session.py</strong> to call the same function</li>
     
 ~~~
 In html page
