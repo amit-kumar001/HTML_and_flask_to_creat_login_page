@@ -9,6 +9,14 @@
   
 <li>Create a database in <strong>phpmyadmin</strong> and make a connection with the registration page and login page with the help of flask,  when we enter details in to the registration page all details will store in the database.</li>
 
+~~~
+import mysql.connector
+db = mysql.connector.connect(host="localhost", user="root", password="Server@123", database="joins")
+print("connection successful")
+cursor = db.cursor()
+
+~~~
+
 <li>post method is used to transfer user details into the database</li>
 
 <li>in the form action attribute <form action="http://localhost:5000/index"> define server path with function name, this will use in .py page to call that same function</li>
