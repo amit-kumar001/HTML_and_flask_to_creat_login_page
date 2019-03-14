@@ -21,14 +21,17 @@ def index():
       cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])  # CHECKS IF USERNAME EXSIST
       if cursor.fetchone()[0]:
          cursor.execute("SELECT count(1) FROM register WHERE password = %s;", [password])# FETCH THE HASHED PASSWORD
-         if cursor.fetchone()[0]:
+         if cursor.fetchone()[0]:   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
+38
+   #    session['logged_in'] = True
+39
+   # else:
+40
+   #    flash('wrong password!')
+41
+   # return "try again"
            return "thank you"
-         # for row in cursor.fetchall():
-         #    if password == row[0]:
-         #       session['username'] = request.form['username']
-         #       session['password'] = request.form['password']
-         #       return "thank you password match"
-
+  \
          else:
           return "Check password"
       else:
@@ -39,11 +42,7 @@ def index():
 
 
 
-   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
-   #    session['logged_in'] = True
-   # else:
-   #    flash('wrong password!')
-   # return "try again"
+
 
 
 
