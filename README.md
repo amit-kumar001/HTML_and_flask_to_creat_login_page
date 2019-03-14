@@ -58,9 +58,9 @@ def index():
 <li>Same as the last condition we'll use the <strong>SQL query</strong> to check a correct <strong>password</strong>, if enterd username and  password exist in the database then we can enter in the new page otherwise it will show error "please check username and password" </li>
 
 ~~~
-cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])  # CHECKS IF USERNAME EXSIST
+cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])  
       if cursor.fetchone()[0]:
-         cursor.execute("SELECT count(1) FROM register WHERE password = %s;", [password])# FETCH THE HASHED PASSWORD
+         cursor.execute("SELECT count(1) FROM register WHERE password = %s;", [password])
          if cursor.fetchone()[0]:
            return "thank you"
          else:
