@@ -17,7 +17,7 @@ cursor = db.cursor()
 
 ~~~
 
-<li>We use <strong>form action attribute</strong> with the server path <strong> form action="http://localhost:5000/index"</strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py</strong> page (in python file)<strong>session.py</strong> to call the same function</li>
+<li>We use <strong>form action attribute</strong> with the server path <strong> form action="http://localhost:5000/index"</strong> it will define server path with function name <strong>index</strong>, this function will used in <strong>.py</strong> page (in python file)<strong>session.py</strong> to call the same function</li>
     
 ~~~
 In html page
