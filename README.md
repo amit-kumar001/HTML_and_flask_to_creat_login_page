@@ -17,12 +17,13 @@ cursor = db.cursor()
 
 ~~~
 
-<li>We use <strong>form action attribute</strong> with the server path <strong><form action="http://localhost:5000/index"></strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py</strong> page (in python file)<strong>session.py</strong> to call the same function</li>
+<li>We use <strong>form action attribute</strong> with the server path <strong> <form action="http://localhost:5000/index"></strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py</strong> page (in python file)<strong>session.py</strong> to call the same function</li>
     
 ~~~
 In html page
     <form action="http://localhost:5000/index" method="post">
 ~~~
+
 ~~~
 @app.route('/index', methods = ['GET','POST'])
 def index():
@@ -45,6 +46,7 @@ def index():
 ~~~
 
 <li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
+
 ~~~  
 @app.route('/index', methods = ['GET','POST'])
 def index():
