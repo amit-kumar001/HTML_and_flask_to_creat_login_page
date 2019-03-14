@@ -71,3 +71,13 @@ cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])
 ~~~
 
 </ol>  
+
+### How to run this file
+<ol>
+    <li>First we need to run <strong>.py<strong> <strong>(session.py)</strong> file because it provide server to run the flask.</li></br>  
+ 
+ ![3rdimg](https://user-images.githubusercontent.com/47202519/54352071-c9f6f100-4676-11e9-9af0-a1b5373582e7.png)</br>
+ <li>Second step:- Now we can run <strong>.html</strong> <strong>(sigin.html)</strong> <strong>(reg.html)</strong> files </li>
+
+       
+</ol>
