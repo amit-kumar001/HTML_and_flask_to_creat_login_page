@@ -3,7 +3,7 @@
 <ol>
 <li>Create the login page <strong>(sigin.html)</strong> and registration page <strong>(reg.html)</strong> with the help of <strong>HTML language</strong>, only register user can enter in login page otherwise user have to fill details in the registration page to become register user.</li> </br> 
     
-   ![sess2](https://user-images.githubusercontent.com/47202519/54346602-60bdb080-466b-11e9-8193-ee61015ba34f.png)
+   ![sess2](https://user-images.githubusercontent.com/47202519/54346602-60bdb080-466b-11e9-8193-ee61015ba34f.png)</br></br>
    ![sess1](https://user-images.githubusercontent.com/47202519/54346898-e4779d00-466b-11e9-9ef3-851c4db36a99.png)
     
   
@@ -46,7 +46,23 @@ def index():
 
 <li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
 
-~~~
+~~~   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
+38
+   #    session['logged_in'] = True
+39
+   # else:   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
+38
+   #    session['logged_in'] = True
+39
+   # else:
+40
+   #    flash('wrong password!')
+41
+   # return "try again"
+40
+   #    flash('wrong password!')
+41
+   # return "try again"
 @app.route('/index', methods = ['GET','POST'])
 def index():
    if request.method == 'POST':
