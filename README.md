@@ -1,5 +1,9 @@
 # HTML_and_flask_to_create_login_page
-## Key feature
+## Key feature  
+
+![index](https://user-images.githubusercontent.com/47202519/54356826-8bffca00-4682-11e9-8213-64e4f553f0e9.png)  
+
+
 <ol>
 <li>Create the login page <strong>(sigin.html)</strong> and registration page <strong>(reg.html)</strong> with the help of <strong>HTML language</strong>, only register user can enter in login page otherwise user have to fill details in the registration page to become register user.</li> </br> 
     
@@ -45,7 +49,7 @@ def index():
 
 ~~~
 
-<li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
+<li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>  
 
 ~~~  <form action=
 @app.route('/index', methods = ['GET','POST'])
@@ -76,7 +80,11 @@ cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])
 
 ### How to run this file
 <ol>
-    <li>First we need to run <strong>.py</strong> <strong>(session.py)</strong> file because it provide server to run the flask.</li></br>  
+    <li>First we need to run <strong>.py</strong> <strong>(session.py)</strong> file because it provide server to run the flask.</li></br>    
+    
+```
+python session.py
+```   
  
  ![3rdimg](https://user-images.githubusercontent.com/47202519/54352071-c9f6f100-4676-11e9-9af0-a1b5373582e7.png)</br>
  <li>Second step:- Now we can run <strong>.html</strong> <strong>(sigin.html)</strong> <strong>(reg.html)</strong> files. </li>
