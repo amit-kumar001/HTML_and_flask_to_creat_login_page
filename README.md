@@ -30,6 +30,7 @@ def index():
 ~~~
 
 <li><strong>post method</strong> is used to transfer user details into the database</li>
+
 ~~~
  if request.method == 'POST':
       name = request.form['name']
@@ -42,7 +43,9 @@ def index():
       pincode=request.form['pincode']
 
 ~~~
+
 <li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
+
 ~~~
 @app.route('/index', methods = ['GET','POST'])
 def index():
@@ -53,6 +56,7 @@ def index():
 
 <li><strong>SQL query</strong> <strong> (SELECT count(1) FROM register WHERE username = %s;", [username])</strong> is used to check that username is already store in the database if it exists in the database then enter password otherwise it will show error "check username"   </li>
 <li>Same as the last condition we use the SQL query to check a correct password, if enterd username and  password exist in the database then we can enter in the new page otherwise it will show error "please check username and password" </li>
+
 ~~~
 cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])  # CHECKS IF USERNAME EXSIST
       if cursor.fetchone()[0]:
@@ -64,4 +68,5 @@ cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])
       else:
          return"check username and password"
 ~~~
+
 </ol>  
