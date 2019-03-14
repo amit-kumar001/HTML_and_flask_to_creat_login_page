@@ -17,11 +17,51 @@ cursor = db.cursor()
 
 ~~~
 
-<li>post method is used to transfer user details into the database</li>
+<li>We use <strong>form action attribute</strong> with server path <strong><form action="http://localhost:5000/index"></strong>it will define server path with function name <strong>index</strong>, this function will used in <strong>.py<strong> page (in python file)<strong>session.py</strong> to call the same function</li>
+    
+~~~
+In html page
+    <form action="http://localhost:5000/index" method="post">
+~~~
+~~~
+@app.route('/index', methods = ['GET','POST'])
+def index():
+   return render_template('sigin.html')
+~~~
 
-<li>in the form action attribute <form action="http://localhost:5000/index"> define server path with function name, this will use in .py page to call that same function</li>
-<li>with the help of same function name we can store data from html page to database with the help of flask</li>
-<li>back to main page (login page ) only register username and password can have access to enter in this page.</li>
-<li>SQL query (SELECT count(1) FROM register WHERE username = %s;", [username]) is used to check that username is already store in the database if it exists in the database then enter password otherwise it will show error "check username"   </li>
-<li>the last condition will be same to check the password, if enterd username and  password exist in the database then we can enter in the new page otherwise it will show error "please check username and password" </li>
+<li><strong>post method</strong> is used to transfer user details into the database</li>
+~~~
+ if request.method == 'POST':
+      name = request.form['name']
+      l_name = request.form['l_name']
+      username = request.form['username']
+      password = request.form['password']
+      address = request.form['address']
+      phone = request.form['phone']
+      email = request.form['email']
+      pincode=request.form['pincode']
+
+~~~
+<li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
+~~~
+@app.route('/index', methods = ['GET','POST'])
+def index():
+   if request.method == 'POST':
+      username = request.form['username']
+      password = request.form['password']
+~~~
+
+<li><strong>SQL query</strong> <strong> (SELECT count(1) FROM register WHERE username = %s;", [username])</strong> is used to check that username is already store in the database if it exists in the database then enter password otherwise it will show error "check username"   </li>
+<li>Same as the last condition we use the SQL query to check a correct password, if enterd username and  password exist in the database then we can enter in the new page otherwise it will show error "please check username and password" </li>
+~~~
+cursor.execute("SELECT count(1) FROM register WHERE username = %s;", [username])  # CHECKS IF USERNAME EXSIST
+      if cursor.fetchone()[0]:
+         cursor.execute("SELECT count(1) FROM register WHERE password = %s;", [password])# FETCH THE HASHED PASSWORD
+         if cursor.fetchone()[0]:
+           return "thank you"
+         else:
+          return "Check password"
+      else:
+         return"check username and password"
+~~~
 </ol>  
