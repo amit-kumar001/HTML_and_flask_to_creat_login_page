@@ -46,28 +46,13 @@ def index():
 
 <li>Back to main page (login page)<strong>(sigin.html)</strong> only register username and password can have access to enter in this page.</li>
 
-~~~   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
-38
-   #    session['logged_in'] = True
-39
-   # else:   # if request.form['password'] == 'password' and request.form['username'] == 'admin':
-38
-   #    session['logged_in'] = True
-39
-   # else:
-40
-   #    flash('wrong password!')
-41
-   # return "try again"
-40
-   #    flash('wrong password!')
-41
-   # return "try again"
+~~~  
 @app.route('/index', methods = ['GET','POST'])
 def index():
    if request.method == 'POST':
       username = request.form['username']
       password = request.form['password']
+      
 ~~~
 
 <li><strong>SQL query</strong> <strong> (SELECT count(1) FROM register WHERE username = %s;", [username])</strong> is used to check that username is already store in the database if it exists in the database then enter password otherwise it will show error "check username"   </li>
