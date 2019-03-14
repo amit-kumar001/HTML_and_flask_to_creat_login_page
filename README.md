@@ -1,4 +1,4 @@
-# HTML_and_flask_to_creat_login_page
+# HTML_and_flask_to_create_login_page
 ## Key feature
 <ol>
 <li>Create the login page <strong>(sigin.html)</strong> and registration page <strong>(reg.html)</strong> with the help of <strong>HTML language</strong>, only register user can enter in login page otherwise user have to fill details in the registration page to become register user.</li> </br> 
